@@ -48,6 +48,7 @@ export default class Post extends Component {
       this.setState({ showMasterMenu: false });
     }
   }
+  
 
   render() {
     // This is destructuring! You can also think of it as being written as so:
@@ -97,6 +98,7 @@ export default class Post extends Component {
             editing
             ?
               <Edit text= { text }
+                    id={ id }
                     hideEdit={ this.hideEdit }
                     updatePostFn={ this.props.updatePostFn } />
             :

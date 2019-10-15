@@ -32,8 +32,8 @@ class App extends Component {
     })
   }
 
-  deletePost() {
-    axios.delete('https://practiceapi.devmountain.com/api/posts?id=${ id }').then( results => {
+  deletePost( id ) {
+    axios.delete(`https://practiceapi.devmountain.com/api/posts?id=${ id }`).then( results => {
       this.setState({ posts: results.data })
     })
   }
